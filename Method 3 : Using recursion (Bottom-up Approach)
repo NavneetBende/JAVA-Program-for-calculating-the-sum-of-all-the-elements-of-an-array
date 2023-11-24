@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Main
+{
+   static int getSum(int[] arr, int index){
+
+       if(index==0)
+         return arr[index];
+
+       return arr[index] + getSum(arr, index-1);
+   }
+   public static void main(String args[])
+   {
+
+      int arr[] = {12, 13, 1, 10, 34, 10};
+
+      int n = arr.length;
+      System.out.print(getSum(arr, n-1)); 
+   }
+}
